@@ -1,0 +1,73 @@
+body{
+    border:1px solid black;
+}
+
+.heading1{
+    width: 100%;
+    height: fit-content ;
+    text-align: center;
+    border-bottom: 1px solid black;
+    mar
+    /* color: blueviolet; */
+  
+}
+
+.heading2{
+    color: green;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    
+    
+}
+
+.leftBox{
+    width: 30%;
+    border-right:1px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* flex-grow: 1; */
+}
+
+.rightBox{
+    width: 70%;
+    margin-left: 1em;
+    /* flex-grow: 1; */
+    /* flex-shrink: 4; */
+    
+}
+
+.leftBox a{
+    display: block;
+    line-height:2em;
+    
+}
+
+
+
+.content{
+    margin-left: 3em;
+}
+
+.content span{
+    font-weight: 600;
+    
+}
+
+hr{
+    max-width: 80%;
+}
+
+#up{
+    
+    width: 70%;
+    margin-left: 80%;
+}
+
+
