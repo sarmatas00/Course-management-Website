@@ -55,10 +55,16 @@ body{
     margin-left: 3em;
 }
 
-.content span{
+p:nth-of-type(6) span{
+    color: orangered;
+    
+}
+
+p span{
     font-weight: 600;
     
 }
+
 
 hr{
     max-width: 80%;
