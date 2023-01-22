@@ -7,13 +7,14 @@ body{
     height: fit-content ;
     text-align: center;
     border-bottom: 1px solid black;
-    mar
+    
     /* color: blueviolet; */
   
 }
 
 .heading2{
     color: green;
+    display: inline;
 }
 
 .container{
