@@ -43,6 +43,5 @@ $documents = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <a href="#top" id="up">&lt;top&gt;</a>
       </div>
     </div>
-    <a href="logout.php">Log Out</a>
   </body>
 </html>

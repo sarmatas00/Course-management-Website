@@ -21,7 +21,7 @@
             <p>
               <span>Κείμενο: </span><input type="text" name="text" value="<?=$text?>" required />
             </p>
-            <input type="submit" name="update" value="Update">
+            <input type="submit" name="updateAnn" value="Update">
           </form>
 
 

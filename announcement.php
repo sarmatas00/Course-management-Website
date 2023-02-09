@@ -10,7 +10,7 @@ $announcements = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <a href="newAnnouncement.php">Προσθήκη νέας ανακοινώσης</a>
   <hr>
 
-<?php }?>
+<?php } $i=1;?>
 
 <?php if (empty($announcements)): ?>
   <h2 class="heading2">Δεν υπαρχουν ανακοινωσεις</h2>
@@ -18,7 +18,7 @@ $announcements = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
   <?php foreach ($announcements as $item):
-    $i=1; ?>
+     ?>
     
     
 
@@ -42,6 +42,5 @@ $announcements = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <a href="#top" id="up">&lt;top&gt;</a>
       </div>
     </div>
-    <a href="logout.php">Log Out</a>
   </body>
 </html>

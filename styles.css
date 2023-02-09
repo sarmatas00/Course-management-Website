@@ -2,19 +2,27 @@ body{
     border:1px solid black;
 }
 
+h1{
+    margin-top: 0;
+
+}
+
 .heading1{
     width: 100%;
     height: fit-content ;
     text-align: center;
     border-bottom: 1px solid black;
-    
-    /* color: blueviolet; */
+    background-color:aliceblue;
+    padding-top: 1em;
+
   
 }
 
+
 .heading2{
-    color: green;
+    color: #0b790b;
     display: inline;
+
 }
 
 .container{
@@ -33,14 +41,15 @@ body{
     border-right:1px solid black;
     padding-left: 1em;
     padding-right: 1em;
-    /* flex-grow: 1; */
+    background-color: aliceblue;
+
 }
 
 .rightBox{
     width: 70%;
-    margin-left: 1em;
-    /* flex-grow: 1; */
-    /* flex-shrink: 4; */
+    padding-left: 1em;
+    background-color:rgb(178, 156, 202);
+
     
 }
 
@@ -57,7 +66,7 @@ body{
 }
 
 p:nth-of-type(6) span{
-    color: orangered;
+    color: rgb(14, 133, 93);
     
 }
 
@@ -76,5 +85,42 @@ hr{
     width: 70%;
     margin-left: 80%;
 }
+
+.leftBox a:hover{
+    background-color: blueviolet;
+}
+
+.rightBox a:hover{
+    text-decoration: underline;
+
+}
+
+
+
+
+a{
+    text-decoration: none;
+    font-size: large;
+    
+}
+
+
+input{
+    background-color: beige;
+}
+
+input[type='submit']{
+    background-color: rgb(168, 104, 20);
+    padding:0.5em 2em 0.5em 2em;
+}
+
+
+input[type='submit']:hover{
+    background-color: red;
+    cursor: pointer;
+
+}
+
+
 
 

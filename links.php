@@ -19,7 +19,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
   </head>
   <body>
     <div class="heading1">
-      <h1>Αρχική</h1>
+      <h1>ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΑΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ</h1>
     </div>
 
     <div class="container">
@@ -29,6 +29,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <a href="communication.php">Επικοινωνία</a>
         <a href="documents.php">Έγγραφα Μαθήματος</a>
         <a href="homework.php">Εργασίες</a>
+        <?php if ($_SESSION['role']=='tutor') {?>
+          <a href="users.php">Χρήστες</a>
+        <?php } ?>
+        <a href="logout.php" class="logout">Log Out</a>
+
       </div>
       <div class="rightBox">
 
@@ -48,23 +53,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Αρχική</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css" />
 
 </head>
 
 <body>
 
-     <form action="validate.php" method="post">
+     <form action="validate.php" method="post" class="login">
 
-        <h2>Πιστοποίηση</h2>
-
-        
-
-        <label>Login</label>
-
+        <h2>ΠΙΣΤΟΠΟΙΗΣΗ</h2>
         <input type="email" name="uname" placeholder="Email"><br>
-
-        <label>Password</label>
 
         <input type="password" name="password" placeholder="Password"><br> 
 

@@ -24,11 +24,15 @@
           <p>
             Εναλλακτικά μπορείτε να αποστείλετε e-mail στην παρακάτω διεύθυνση
             ηλεκτρονικού ταχυδρομείου
-            <a href="mailto:tutor@csd.auth.test.gr">tutor@csd.auth.test.gr</a>
+
+            <?php $sql = 'SELECT * FROM users WHERE role="tutor"';
+            $result = mysqli_query($conn, $sql);
+            $users = mysqli_fetch_all($result, MYSQLI_ASSOC);?>
+
+            <a href="mailto:tutor@csd.auth.test.gr"><?=$users[0]['login']?></a>
           </p>
         </div>
       </div>
     </div>
-    <a href="logout.php">Log Out</a>
   </body>
 </html>
