@@ -1,8 +1,10 @@
 <?php
+#script που στελνει email στους καθηγητες, οταν καποιος χρησιμοποιησει την φορμα επικοινωνιας
+
 include 'db.php';
 
 
-if (isset($_POST['send'])) { // if save button on the form is clicked
+if (isset($_POST['send'])) {                    #ληψη κειμενων επικοινωνιας
     session_start();
     $name = $_POST['name'];
     $context = $_POST['context'];
@@ -12,16 +14,16 @@ if (isset($_POST['send'])) { // if save button on the form is clicked
     $sql = 'SELECT * FROM users';
     $result = mysqli_query($conn, $sql);
     $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    foreach ($announcements as $item):
+    foreach ($users as $item):                                 #για καθε χρηστη στη βαση                  
         
-            if($item['role']=='tutor'){
+            if($item['role']=='tutor'){                         #αν ειναι καθηγητης
                 $email = $item['login'];
                 $headers = "From: '$name'";
-                mail($email, $context, $text, $headers);
+                mail($email, $context, $text, $headers);            #στελνουμε mail τα περιεχομενα της φορμας επικοινωνιας
             }
     endforeach;
         
 
-    header('Location: communication.php');
+    header('Location: communication.php');                      #ανακατευθυνση πισω στην σελιδα επικοινωνιας
     exit;
 }

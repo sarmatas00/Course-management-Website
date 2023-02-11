@@ -1,8 +1,14 @@
+<?#φορμα προσθηκης νεου χρηστη?>
+
+
 <?php include 'links.php'; ?> 
 
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
             
+            <p>
+              <span>Ονοματεπωνυμο: </span><input type="text" name="name" required />
+            </p>
             <p>
               <span>Email: </span><input type="email" name="login" required />
             </p>

@@ -1,10 +1,13 @@
-<?php include 'db.php'; ?> 
+<?php
+#η αριστερη πλευρα της σελιδας με τα links που οδηγουν στις υπολοιπες
+#το συμπεριλαμβανουμε σε ολες τις σελιδες
+ include 'db.php'; ?> 
 
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {                  #αν εχει επιτυχως συνδεθει καποιος χρηστης
 
  ?>
 
@@ -40,8 +43,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
       <?php 
 
 }else{
- include 'validate.php'
-
+ include 'validate.php'                             #αν δεν εχει κανει συνδεση καποιος χρηστης
+                                                    #εμφανιζεται το login page στον χρηστη
   ?>
   <!DOCTYPE html>
 

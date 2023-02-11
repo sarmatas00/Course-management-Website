@@ -1,16 +1,18 @@
 <?php
+#διαγραφη εργασιας
+
 include 'db.php';
 
-$id = $_GET['id'];
+$id = $_GET['id'];                      #το id που εχουμε περασει μεσω href
 
 
-$sql = "DELETE FROM homework WHERE id='" . $id . "'";
+$sql = "DELETE FROM homework WHERE id='" . $id . "'";                   #sql για διαγραφη της αναλογης εργασιας
 if (mysqli_query($conn, $sql)) {
-    echo "Record deleted successfully";
-    header('Location: homework.php');
+    echo "Επιτυχης διαγραφη εργασιας";
+    header('Location: homework.php');                                   #ανακατευθυνση στην σελιδα εργασιων
     exit;
 } else {
-    echo "Error deleting record: " . mysqli_error($conn);
+    echo "Error" . mysqli_error($conn);
 }
 
 ?>
